@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .n {
+            width: 1200px;
+            height: 170px;
+            /* background: lightblue; */
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            position: absolute;
+        }
+
+        .middleblack {
+            width: 70px;
+            height: 170px;
+            background: #000;
+            top: 50%;
+            left: 50%;
+            transform: translate(-120%, -50%);
+            position: absolute;
+            z-index: 1;
+
+        }
+
+        .dash {
+            content: "";
+            width: 790px;
+            height: 30px;
+            position: relative;
+            background: repeating-linear-gradient(to right,
+                    #9c9c9c 0 1px,
+                    transparent 1px 10px);
+            left: 165px;
+        }
+
+        .word {
+            color: #9c9c9c;
+            font-size: 30px;
+            font-family: "微軟正黑體";
+            text-align: left;
+            left: 160px;
+            bottom: -30px;
+            z-index: 5;
+            position: absolute;
+        }
+
+        .middle::before {
+            content: "";
+            height: 170px;
+            width: 400px;
+            background: linear-gradient(to bottom, white 10%, #c5c5c5 60%, #fff);
+            left: calc(70px + 80px);
+            position: absolute;
+            border: 1px solid #b1afaf;
+
+        }
+
+        .middle::after {
+            content: "";
+            height: 170px;
+            width: 400px;
+            background: linear-gradient(to bottom, rgb(253, 255, 143) 10%, rgb(192, 194, 108) 60%, rgb(253, 255, 143));
+            right: calc(170px + 80px);
+            position: absolute;
+            border: 1px solid #b1afaf;
+
+        }
+
+        .left1 {
+            height: 170px;
+            width: 70px;
+            border-radius: 10%;
+            background: linear-gradient(to bottom, white 10%, #c5c5c5 60%, #fff);
+            border: #b1afaf 1px solid;
+            left: 0;
+            top: 0;
+            position: absolute;
+        }
+
+        .left2 {
+            height: 130px;
+            width: 80px;
+            background: linear-gradient(to bottom, white 10%, #c5c5c5 60%, #fff);
+            border: #b1afaf 1px solid;
+
+            left: 70px;
+            top: calc(50% - 65px);
+            position: absolute;
+        }
+
+        .left3 {
+            height: 130px;
+            width: 80px;
+            background: linear-gradient(to bottom, white 10%, #c5c5c5 60%, #fff);
+            border: #b1afaf 1px solid;
+            border-radius: 0px 20px 20px 0px;
+            left: calc(70px + 80px + 800px);
+            top: calc(50% - 65px);
+            position: absolute;
+        }
+
+        .pin {
+            width: 170px;
+            height: 1px;
+            background: #000;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            position: absolute;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="n">
+        <div class="middleblack"></div>
+        <div class="left1"></div>
+        <div class="left2"></div>
+        <div class="middle"></div>
+        <div class="dash"></div>
+        <div class="left3"></div>
+        <div class="word">
+            <p>Made in Taiwan</p>
+        </div>
+        <div class="pin"></div>
+    </div>
+
+</body>
+
+</html>
